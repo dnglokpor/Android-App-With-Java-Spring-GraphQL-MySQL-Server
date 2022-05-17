@@ -1,0 +1,18 @@
+# schema for boards
+type Board {
+   id: ID!
+   boardId: String!
+   population: Int!
+}
+extend type Mutation {
+   # create board
+   makeBoard(boardId: String!): Board
+   # post a note on the board
+   postOn(boardId: String!, userId: String!, title: String!, body: String!): Post
+}
+extend type Query {
+   # get a specific board
+   getBoard(boardId: String!): Board
+   # get all posts on a board
+   getPostsOnBoard(boardId: String!): [Post!]
+}

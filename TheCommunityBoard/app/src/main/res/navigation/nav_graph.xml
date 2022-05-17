@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.thecommunityboard.ui.main.SignInFragment"
+        android:label="Sign In"
+        tools:layout="@layout/sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_userMainFragment"
+            app:destination="@id/userMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.thecommunityboard.ui.main.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_userMainFragment"
+            app:destination="@id/userMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userMainFragment"
+        android:name="com.example.thecommunityboard.ui.main.UserMainFragment"
+        android:label="@string/welcome_message"
+        tools:layout="@layout/user_main">
+        <argument
+            android:name="username"
+            app:argType="string"
+        />
+    </fragment>
+</navigation>

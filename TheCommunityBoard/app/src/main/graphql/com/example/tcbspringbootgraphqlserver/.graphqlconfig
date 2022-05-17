@@ -1,0 +1,15 @@
+{
+  "name": "TheCommunityBoardSchema",
+  "schemaPath": "schema.graphqls",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "http://10.200.4.114:8080/thecommunityboard",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}

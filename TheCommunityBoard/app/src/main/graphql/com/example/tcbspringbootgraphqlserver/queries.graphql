@@ -1,0 +1,43 @@
+query GetUser($userId: String!) {
+    getUser(userId: $userId) {
+        id username birthDate
+    }
+}
+
+query CheckUser($username: String!, $password: String!) {
+    checkUser(username: $username password: $password) {
+        id userId birthDate
+    }
+}
+
+query GetBoard($boardId: String!) {
+    getBoard(boardId: $boardId) {
+        id boardId population
+    }
+}
+
+query GetPostsOnBoard($boardId: String!) {
+    getPostsOnBoard(boardId: $boardId) {
+        id
+        postSite {
+            boardId
+        }
+        author {
+            userId
+        }
+        title body datePosted dateRemoved views rips isPosted
+    }
+}
+
+query GetPostStats ($boardId: ID!, $authorId: ID!, $postTitle: String) {
+    getPostStats(boardId: $boardId, authorId: $authorId, postTitle: $postTitle) {
+        id
+        postSite {
+           boardId
+        }
+        author {
+            userId
+        }
+        title body datePosted dateRemoved views rips isPosted
+    }
+}

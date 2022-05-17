@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">The Community Board</string>
+    <string name="main_title">THE COMMUNITY BOARD</string>
+    <string name="username">Username:</string>
+    <string name="username_hinted">e.g.: myLewysG</string>
+    <string name="username_hint">min. 6 chars. must start with a letter. underscore is the only special character allowed</string>
+    <string name="password">password:</string>
+    <string name="password_hint">min. 10 chars with uppercase, lowercase, digit and special characters</string>
+    <string name="password_hinted">enter your password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="new_user_text">New user? Then</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="birth_date">Birth Date:</string>
+    <string name="bdate_hint">eg.: May 9, 1997</string>
+    <string name="terms_agreement">I agree to the terms of usage</string>
+    <string name="bdate_button_hint">enter your birthdate</string>
+    <string name="verifying_user">verifying user</string>
+    <string name="empty_field_error">You must enter your %s!</string>
+    <string name="board_button_action">See board</string>
+    <string name="welcome_message">Welcome back {username}!</string>
+</resources>

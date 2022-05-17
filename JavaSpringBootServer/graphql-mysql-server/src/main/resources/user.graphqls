@@ -1,0 +1,22 @@
+# schema describing users
+type User {
+   id: ID!
+   userId: String!
+   username: String!
+   birthDate: String!
+   password: String!
+}
+# root mutation
+type Mutation {
+   # add a new user
+   addUser(username: String!, birthDate: String!, password: String!): User
+   # remove an existing user
+   deleteUser(id: ID!): Boolean
+}
+# root query
+type Query {
+   # check if user exists
+   checkUser(username: String!, password: String!): User
+   # get existing user
+   getUser(userId: String!): User
+}

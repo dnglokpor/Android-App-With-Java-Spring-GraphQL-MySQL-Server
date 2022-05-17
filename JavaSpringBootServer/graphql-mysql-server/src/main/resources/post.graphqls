@@ -1,0 +1,18 @@
+# schema for post
+type Post {
+   id: ID!
+   postSite: Board 
+   author: User!
+   title: String!
+   body: String
+   datePosted: String!
+   dateRemoved: String
+   views: Int!
+   rips: Int!
+   isPosted: Boolean!
+}
+# queries
+extend type Query {
+   # retrieve online information about a post
+   getPostStats(boardId: ID!, authorId: ID!, postTitle: String): Post
+}

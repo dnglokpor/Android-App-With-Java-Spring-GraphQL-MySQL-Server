@@ -1,0 +1,65 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+"This directive allows results to be deferred during execution"
+directive @defer on FIELD
+
+"schema for boards"
+type Board {
+    boardId: String!
+    id: ID!
+    population: Int!
+}
+
+"root mutation"
+type Mutation {
+    "add a new user"
+    addUser(birthDate: String!, password: String!, username: String!): User
+    "remove an existing user"
+    deleteUser(id: ID!): Boolean
+    "create board"
+    makeBoard(boardId: String!): Board
+    "post a note on the board"
+    postOn(boardId: String!, body: String!, title: String!, userId: String!): Post
+}
+
+"schema for post"
+type Post {
+    author: User!
+    body: String
+    datePosted: String!
+    dateRemoved: String
+    id: ID!
+    isPosted: Boolean!
+    postSite: Board
+    rips: Int!
+    title: String!
+    views: Int!
+}
+
+"root query"
+type Query {
+    "check if user exists"
+    checkUser(password: String!, username: String!): User
+    "get a specific board"
+    getBoard(boardId: String!): Board
+    "retrieve online information about a post"
+    getPostStats(authorId: ID!, boardId: ID!, postTitle: String): Post
+    "get all posts on a board"
+    getPostsOnBoard(boardId: String!): [Post!]
+    "get existing user"
+    getUser(userId: String!): User
+}
+
+"schema describing users"
+type User {
+    birthDate: String!
+    id: ID!
+    password: String!
+    userId: String!
+    username: String!
+}

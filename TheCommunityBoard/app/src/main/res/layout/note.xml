@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/note_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/cardview_light_background"
+    app:cardBackgroundColor="#eeffaa23">
+    <!-- affirmation layout -->
+    <!-- layouts3 question 1 -> text in image -->
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp">
+        <!-- title -->
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/note_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:padding="10dp"
+            android:textAppearance="@font/poetsen_one_ff"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hello World!" />
+        <!-- body -->
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/note_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="serif-monospace"
+            android:padding="15dp"
+            android:textAppearance="@font/poetsen_one_ff"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/note_title"
+            tools:text="Kotlin Standard Library
+The Kotlin Standard Library provides living essentials for everyday work with Kotlin. These include:
+Higher-order functions implementing idiomatic patterns (let, apply, use, synchronized, etc).
+Extension functions providing querying operations for collections (eager) and sequences (lazy).
+Various utilities for working with strings and char sequences.
+Extensions for JDK classes making it convenient to work with files, IO, and threading." />
+        <!-- signature -->
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/note_signature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="serif-monospace"
+            android:padding="15dp"
+            android:textAppearance="@font/poetsen_one_ff"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/note_body"
+            tools:text="myLewysG#4567" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

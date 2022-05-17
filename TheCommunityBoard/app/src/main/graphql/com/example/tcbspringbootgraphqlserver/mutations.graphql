@@ -1,0 +1,18 @@
+mutation AddUser($username: String!, $birthDate: String!, $password: String!){
+    addUser(username: $username, birthDate: $birthDate, password: $password) {
+        id userId birthDate
+    }
+}
+
+mutation PostOn($boardId: String!, $userId: String!, $title: String!, $body: String!) {
+    postOn(boardId: $boardId, userId: $userId, title: $title, body: $body) {
+        id
+        postSite {
+            boardId
+        }
+        author {
+            userId
+        }
+        title body datePosted dateRemoved views rips isPosted
+    }
+}
